@@ -67,7 +67,7 @@ def merge_data(transaction_path, conversion_rate_path, output_path):
     # save ไฟล์ CSV
     final_df.to_csv(output_path, index=False)
     print(f"Output to {output_path}")
-    print("== End of Workshop 4 ʕ•́ᴥ•̀ʔっ♡ ==")
+ 
 
 
 with DAG(
@@ -76,13 +76,7 @@ with DAG(
     schedule_interval="@once",
     tags=["workshop"]
 ) as dag:
-
-    dag.doc_md = """
-    # Workshop5: Load to BigQuery ด้วยคำสั่ง bq load
-    bq command เป็น command-line tool ที่สามารถใช้จัดการกับ BigQuery ได้
-    ดูเพิ่มเติมได้ที่นี่ https://cloud.google.com/bigquery/docs/loading-data-cloud-storage-csv#loading_csv_data_into_a_table
-    """
-
+    
     t1 = PythonOperator(
         task_id="get_data_from_mysql",
         python_callable=get_data_from_mysql,
