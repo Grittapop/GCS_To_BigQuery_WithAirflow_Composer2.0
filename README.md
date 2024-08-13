@@ -51,3 +51,7 @@ This project is focused on executing end-to-end data engineering processes. It l
 - Go to Airflow UI.
 - Wait for the DAG name bq_load to appear.
 - Click on the DAG and then click Run to start execution.
+
+### References
+- [Apache Airflow Connection Documentation](https://airflow.apache.org/docs/apache-airflow/2.1.4/howto/connection.html) - Learn about managing connections in Apache Airflow.
+
